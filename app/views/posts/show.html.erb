@@ -1,5 +1,14 @@
-<p> Title: <%= @post.title %></p>
-<p> Author: <%= link_to @post.author, @post.author %></p>
+<h1> Title: <%= @post.title %></h1>
+<h2> Author: <%= link_to @post.blogger.name, blogger_path(@post.blogger_id) %></h2>
 <%= @post.content %>
 
-<%= link_to @post.destination, @post.destination %>
+<br>
+<br>
+<p> Destination: <%= link_to @post.destination.name, destination_path(@post.destination_id) %></p>
+
+<br>
+<%= link_to "All bloggers", bloggers_path %>
+<br>
+<%= link_to "All destinations", destinations_path %>
+<br>
+<%= link_to "All posts", posts_path %>
