@@ -1,0 +1,22 @@
+<h1>Edit <%= @blogger.name %></h1>
+
+<%= form_for @blogger do |f| %>
+  <div class="field">
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  </div>
+  <br>
+  <div class="field">
+  <%= f.label :bio %>
+  <%= f.text_area :bio %>
+  </div>
+  <br>
+  <div class="field">
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+  </div>
+  <br>
+  <div class="action">
+  <%= f.submit %>
+
+<%= link_to "All bloggers", bloggers_path %>
