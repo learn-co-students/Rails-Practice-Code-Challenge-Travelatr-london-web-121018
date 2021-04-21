@@ -1,0 +1,18 @@
+<h1>All the bloggers</h1>
+
+
+
+<% @bloggers.each do |blogger| %>
+<%= link_to blogger.name, blogger %><br>
+
+<% end %>
+
+<br>
+<%= link_to "Add a blogger", new_blogger_path %>
+<br>
+<%= link_to "Add a post", new_post_path %>
+<br>
+<%= link_to "All posts", posts_path %>
+
+<br>
+<%= link_to "All destinations", destinations_path %>
